@@ -1,0 +1,845 @@
+{
+	"info": {
+		"_postman_id": "20d43092-ed89-46f7-88be-dd5998401e67",
+		"name": "real",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13572478"
+	},
+	"item": [
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "add project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New charm\",\r\n    \"forShow\":false,\r\n    \"area\":\"domiyate\",\r\n    \"image\":\"https://th.bing.com/th/id/OIP.h66hdGx0oust5O6P7rx4wwHaFg?w=202&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}projects",
+							"host": [
+								"{{base_url}}projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura City\",\r\n    \"forShow\":false,\r\n    \"area\":\"new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}projects/update/63cd06363ebdd3e583dd7235",
+							"host": [
+								"{{base_url}}projects"
+							],
+							"path": [
+								"update",
+								"63cd06363ebdd3e583dd7235"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura\",\r\n    \"forShow\":false,\r\n    \"area\":\"Dakahlia new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}projects/delete/63d0e85c73801f8f02c6ae3d",
+							"host": [
+								"{{base_url}}projects"
+							],
+							"path": [
+								"delete",
+								"63d0e85c73801f8f02c6ae3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single project",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura\",\r\n    \"forShow\":false,\r\n    \"area\":\"Dakahlia new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}projects/single/63cd832ee6962c8761b9df38",
+							"host": [
+								"{{base_url}}projects"
+							],
+							"path": [
+								"single",
+								"63cd832ee6962c8761b9df38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura\",\r\n    \"forShow\":false,\r\n    \"area\":\"Dakahlia new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}projects/all",
+							"host": [
+								"{{base_url}}projects"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all project builds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura\",\r\n    \"forShow\":false,\r\n    \"area\":\"Dakahlia new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}projects/63cd832ee6962c8761b9df38",
+							"host": [
+								"{{base_url}}projects"
+							],
+							"path": [
+								"63cd832ee6962c8761b9df38"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "builds",
+			"item": [
+				{
+					"name": "add build",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"buildLetter\":\"e\",\r\n    \"area\":\"2\",\r\n    \"image\":\"https://66.media.tumblr.com/tumblr_m97zrajEuW1qzugey.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}builds/63d0ee8527ff830a942ce578",
+							"host": [
+								"{{base_url}}builds"
+							],
+							"path": [
+								"63d0ee8527ff830a942ce578"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update build",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"buildLetter\":\"d\",\r\n    \"area\":\"1\",\r\n    \"image\":\"https://th.bing.com/th/id/R.c0b76b0758e5675b0d5af892ac18c052?rik=aDpmGoT96uo7Cg&pid=ImgRaw&r=0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}builds/update/63d0f12aa802da1049afbc8d",
+							"host": [
+								"{{base_url}}builds"
+							],
+							"path": [
+								"update",
+								"63d0f12aa802da1049afbc8d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete build",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura\",\r\n    \"forShow\":false,\r\n    \"area\":\"Dakahlia new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}builds/delete/63d0f2d1a802da1049afbc91",
+							"host": [
+								"{{base_url}}builds"
+							],
+							"path": [
+								"delete",
+								"63d0f2d1a802da1049afbc91"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single build",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}builds/single/63d0f39ba802da1049afbc95",
+							"host": [
+								"{{base_url}}builds"
+							],
+							"path": [
+								"single",
+								"63d0f39ba802da1049afbc95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all builds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}builds/all",
+							"host": [
+								"{{base_url}}builds"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all build floors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}builds/63d0f39ba802da1049afbc95/floors",
+							"host": [
+								"{{base_url}}builds"
+							],
+							"path": [
+								"63d0f39ba802da1049afbc95",
+								"floors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "floors",
+			"item": [
+				{
+					"name": "add floor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":\"102\",\r\n    \"image\":\"https://66.media.tumblr.com/tumblr_m97zrajEuW1qzugey.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}floors/63d0f39ba802da1049afbc95",
+							"host": [
+								"{{base_url}}floors"
+							],
+							"path": [
+								"63d0f39ba802da1049afbc95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update floor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":\"110\",\r\n    \"image\":\"https://66.media.tumblr.com/tumblr_m97zrajEuW1qzugey.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}floors/update/63d0f79c43121582e3c6f4b8",
+							"host": [
+								"{{base_url}}floors"
+							],
+							"path": [
+								"update",
+								"63d0f79c43121582e3c6f4b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete floor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura\",\r\n    \"forShow\":false,\r\n    \"area\":\"Dakahlia new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}floors/delete/63d0f70debcc7d6eb0a6b0d7",
+							"host": [
+								"{{base_url}}floors"
+							],
+							"path": [
+								"delete",
+								"63d0f70debcc7d6eb0a6b0d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single floor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}builds/single/63d0f39ba802da1049afbc95",
+							"host": [
+								"{{base_url}}builds"
+							],
+							"path": [
+								"single",
+								"63d0f39ba802da1049afbc95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all floors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}floors/all",
+							"host": [
+								"{{base_url}}floors"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all floor units",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}floors/63d0f79c43121582e3c6f4b8/units",
+							"host": [
+								"{{base_url}}floors"
+							],
+							"path": [
+								"63d0f79c43121582e3c6f4b8",
+								"units"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "units",
+			"item": [
+				{
+					"name": "add unit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":\"160\",\r\n    \"images\":[{\"image\":\"https://th.bing.com/th/id/R.a3a24451058d2773ab427466bba28cfa?rik=c%2f89cAND0QoDpw&riu=http%3a%2f%2fcasarocca.co.th%2fwp-content%2fuploads%2f2019%2f10%2f00-1024x683.jpg&ehk=Ra26bOTLOc5XgB7svSRUnozlh%2b5cXwp8m3Vu2BBUsFQ%3d&risl=&pid=ImgRaw&r=0\"},\r\n    {\"image\":\"https://i.pinimg.com/736x/50/82/fe/5082fecbd08e5f41e50c73b0f024abe4.jpg\"},\r\n    {\"image\":\"https://i.pinimg.com/474x/c8/82/28/c8822853607ae69ecef5b2e399e7e0d4.jpg\"},\r\n    {\"image\":\"https://th.bing.com/th?q=Building+a+Bathroom+From+Scratch&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.2&pid=InlineBlock&mkt=en-XA&cc=EG&setlang=en&adlt=strict&t=1&mw=247\"}],\r\n    \"price\":1000000,\r\n    \"pathsNum\":2,\r\n    \"roomsNum\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}units/63d0f79c43121582e3c6f4b8",
+							"host": [
+								"{{base_url}}units"
+							],
+							"path": [
+								"63d0f79c43121582e3c6f4b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update unit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":\"106\",\r\n    \"images\":[{\"image\":\"https://i.pinimg.com/736x/50/82/fe/5082fecbd08e5f41e50c73b0f024abe4.jpg\"},\r\n    {\"image\":\"https://i.pinimg.com/474x/c8/82/28/c8822853607ae69ecef5b2e399e7e0d4.jpg\"},\r\n    {\"image\":\"https://th.bing.com/th?q=Building+a+Bathroom+From+Scratch&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.2&pid=InlineBlock&mkt=en-XA&cc=EG&setlang=en&adlt=strict&t=1&mw=247\"}],\r\n    \"price\":1000000,\r\n    \"pathsNum\":2,\r\n    \"roomsNum\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}units/update/63d0fd15fa1129041c992faa",
+							"host": [
+								"{{base_url}}units"
+							],
+							"path": [
+								"update",
+								"63d0fd15fa1129041c992faa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete unit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Mansoura\",\r\n    \"forShow\":false,\r\n    \"area\":\"Dakahlia new mansoura\",\r\n    \"image\":\"https://www.bing.com/th?id=OIP.DKtdE5VLpn1EFo2XlhMycgHaHa&w=171&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}units/delete/63d0fdbcfa1129041c992fbc",
+							"host": [
+								"{{base_url}}units"
+							],
+							"path": [
+								"delete",
+								"63d0fdbcfa1129041c992fbc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single unit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}units/single/63d0fd15fa1129041c992faa",
+							"host": [
+								"{{base_url}}units"
+							],
+							"path": [
+								"single",
+								"63d0fd15fa1129041c992faa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all units",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}floors/all",
+							"host": [
+								"{{base_url}}floors"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"customer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}roles",
+					"host": [
+						"{{base_url}}roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "urls",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleId\":\"{{roleId_customer}}\",\r\n    \"path\":\"/me\",\r\n    \"method\":\"Post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}urls",
+					"host": [
+						"{{base_url}}urls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}users/me",
+					"host": [
+						"{{base_url}}users"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}users/me",
+					"host": [
+						"{{base_url}}users"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/api/",
+			"type": "string"
+		},
+		{
+			"key": "roleId_admin",
+			"value": "63c8fbfab87582036039e7db",
+			"type": "string"
+		},
+		{
+			"key": "roleId_customer",
+			"value": "63cc2505205a1ee14722fbb3",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2NjMmU3Yjc4NDhjZjk2ODAxZTM0OTUiLCJpYXQiOjE2NzQzMjU2NjV9.6n0wCik7feG4aljNHTd_6GmFKv0slyf0bsUZqxyQ8H8",
+			"type": "string"
+		},
+		{
+			"key": "new-mans-proId",
+			"value": "63cd06363ebdd3e583dd7235",
+			"type": "string"
+		}
+	]
+}
