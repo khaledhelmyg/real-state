@@ -14,6 +14,14 @@ class Urls{
             resHelper(res,500,false,err,err.message)
         }
     }
+    static get=async(req,res)=>{
+        try {
+            const role=await urlsModel.findById(req.params.id)
+            resHelper(res,200,true,role,"get urls")
+        } catch (err) {
+            resHelper(res,500,false,err,err.message)
+        }
+    }
 }
 
 module.exports=Urls

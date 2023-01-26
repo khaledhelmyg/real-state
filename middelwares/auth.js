@@ -25,13 +25,23 @@ const Authanticated=async(req,res,next)=>{
 }
 const Authorized =async(req,res,next)=>{
     try {
-        const roleUrls=await req.role.populate("roleUrls")
+        const role=await req.role.populate("roleUrls")
         // if(req.path == roleUrls.path && req.method  === roleUrls.method)
-        const isAuth=req.role.roleUrls.find(roleUrl=>{
-            return req.path==roleUrl.path && req.method== roleUrl.method
+        const isAuth=role.roleUrls.find(roleUrl=>{
+            // console.log(roleUrl.path, "---")
+            // console.log(req.path)
+
+            // console.log(roleUrl.method, "---")
+            // console.log(req.method)
+            // console.log(req.url)
+            const firstRoote=req.path.split('/')[1]
+            const firstRooteToMatch=roleUrl.path.split('/')[1]
+            console.log(firstRoote)
+            console.log(firstRooteToMatch)
+
+            return firstRoote === firstRooteToMatch && req.method == roleUrl.method
         })
         console.log(isAuth)
-
         if(!isAuth)throw new Error
         ("don't have peremission!\n if you need to get access ask super admin please")
         next()
