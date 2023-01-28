@@ -1,6 +1,6 @@
 const express=require("express")
 const cors =require('cors')
-
+const path=require('path')
 const usersRoute=require('./users')
 const rolesRouter=require('./role')
 const urlsRouter=require('./urls')
@@ -17,6 +17,7 @@ require('../models/connect')
 const app=express()
 app.use(cors())
 app.use(express.json())
+app.use(express.static(path.join(__dirname,"./public")))
 
 app.use('/api/users',usersRoute)
 app.use('/api/roles',rolesRouter)

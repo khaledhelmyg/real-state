@@ -41,7 +41,7 @@ const Authorized =async(req,res,next)=>{
 
             return firstRoote === firstRooteToMatch && req.method == roleUrl.method
         })
-        console.log(isAuth)
+        // console.log(isAuth)
         if(!isAuth)throw new Error
         ("don't have peremission!\n if you need to get access ask super admin please")
         next()
