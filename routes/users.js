@@ -5,5 +5,7 @@ const router=require('express').Router()
 router.post('/register',userControler.register)
 router.post('/login',userControler.login)
 router.post('/me',isAuth,hasAuth,userControler.profile)
+router.get('/',userControler.all)
+
 
 module.exports=router

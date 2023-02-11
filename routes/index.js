@@ -16,15 +16,17 @@ const ordersRouter=require('./order')
 require('../models/connect')
 const app=express()
 app.use(cors())
+
+app.use(express.static('public'));
+
 app.use(express.json())
-app.use(express.static(path.join(__dirname,"./public")))
 
 app.use('/api/users',usersRoute)
 app.use('/api/roles',rolesRouter)
 app.use('/api/urls',urlsRouter)
 
 app.use('/api/projects',projectsRouter)
-app.use('/api/builds',buildsRouter)
+app.use('/api/building',buildsRouter)
 app.use('/api/floors',floorsRouter)
 app.use('/api/units',unitsRouter)
 

@@ -27,9 +27,7 @@ const userSchema = mongoose.Schema({
     }, 
     age:{
         type:Number,
-        min:21,
-        max:60,
-        default:21
+        min:18,
     }, 
     email:{
         type:String, 
@@ -60,6 +58,7 @@ const userSchema = mongoose.Schema({
     }, 
     gender:{
         type:String, 
+        required:true,
         trim:true,
         lowercase:true,
         enum: ["male", "female"]
@@ -72,7 +71,8 @@ const userSchema = mongoose.Schema({
         validate(value){
             if(!validator.isMobilePhone(value, "ar-EG"))
                 throw new Error ("invalid number")
-        }
+        },
+        required:true
     },
     addresses: [
         {

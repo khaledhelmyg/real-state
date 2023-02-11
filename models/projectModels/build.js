@@ -14,6 +14,9 @@ const buildSchema=mongoose.Schema({
         type:String,
         required:true,
     },
+    images:[{
+        image:{type:String}
+    }],
     area:{
         type:String
     }

@@ -26,5 +26,13 @@ class Users{
     static profile=(req,res)=>{
         resHelper(res,200,true,{user:req.user},"profile fetched")
     } 
+    static all=async(req,res)=>{
+        try {
+            const users=await userModel.find()
+            resHelper(res,200,true,users,"get all users")
+        } catch (err) {
+            resHelper(res,400,false,err,err.message)
+        }
+    }
 }
 module.exports=Users

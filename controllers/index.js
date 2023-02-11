@@ -76,18 +76,6 @@ class Helper{
                     "unitNumber": `${unit.number}`,
                     "price": `${unit.price}`
                 },
-                // {
-                //     "quantity": 4.1,
-                //     "description": "Product 2",
-                //     "tax-rate": 6,
-                //     "price": 12.34
-                // },
-                // {
-                //     "quantity": 4.5678,
-                //     "description": "Product 3",
-                //     "tax-rate": 21,
-                //     "price": 6324.453456
-                // }
             ],
             // The message you would like to display on the bottom of your invoice
             "bottom-notice": "Hope to see you in our campany agnain.",
@@ -96,12 +84,12 @@ class Helper{
                 "currency": "EGP", // See documentation 'Locales and Currency' for more info. Leave empty for no currency.
                 // "locale": "nl-NL", // Defaults to en-US, used for number formatting (See documentation 'Locales and Currency')
                 // "tax-notation": "gst", // Defaults to 'vat'
-                // "margin-top": 25, // Defaults to '25'
+                "margin-top": 10, // Defaults to '25'
                 // "margin-right": 25, // Defaults to '25'
                 // "margin-left": 25, // Defaults to '25'
-                // "margin-bottom": 25, // Defaults to '25'
-                // "format": "A4", // Defaults to A4, options: A3, A4, A5, Legal, Letter, Tabloid
-                // "height": "1000px", // allowed units: mm, cm, in, px
+                "margin-bottom": 0, // Defaults to '25'
+                "format": "A5", // Defaults to A4, options: A3, A4, A5, Legal, Letter, Tabloid
+                // "height": "100px", // allowed units: mm, cm, in, px
                 // "width": "500px", // allowed units: mm, cm, in, px
                 // "orientation": "landscape", // portrait or landscape, defaults to portrait
             },
@@ -125,12 +113,11 @@ class Helper{
 
     //Create your invoice! Easy!
     static receiptPdf=async(user,employee,order,unit)=>{
-        //The response will contain a base64 encoded PDF file
+        //The response will contain a pdf file name
         const template=this.templet(user,employee,order,unit)
         const receipt=await easyinvoice.createInvoice(template)
-        const fileName=`./public/receiptes/receipt-${Date.now()}-ebny.pdf`
-        fs.writeFileSync(fileName,receipt.pdf,'base64')
-
+        const fileName=`receipt-${Date.now()}-ebny.pdf`
+        fs.writeFileSync(`./public/receiptes/${fileName}`,receipt.pdf,'base64')
         return fileName
     }
 }

@@ -24,6 +24,7 @@ const projectSchema=mongoose.Schema({
     images:[{
         imageUrl:{
             type:String,
+            required:true
         },
         // the number how the imgae is important to apear first
         fav:{
